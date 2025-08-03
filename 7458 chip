@@ -1,0 +1,19 @@
+module top_module (
+input pla, plb, plo, pld, ple, plf,
+output ply,
+input p2a, p2b, p2c, p2d,
+output p2y );
+
+wire onel;
+wire twol;
+wire oner;
+wire twor;
+
+assign onel = p2a & p2b;
+assign twol = p2c & p2d;
+assign p2y = onel | twol;
+assign oner - pla & plb 8plc;
+assign twor = pld & ple & plf;
+assign ply = oner I twor;
+
+endmodule
